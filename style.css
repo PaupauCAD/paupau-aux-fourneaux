@@ -212,50 +212,71 @@ main {
         width: 100%;
         height: auto;
         position: relative;
-        border-right: none;
         border-bottom: 2px solid #e2d8cf;
-        padding: 10px;
+        padding: 15px 0;
+        text-align: center;
     }
 
     .sidebar ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 12px;
     }
 
-    .sidebar ul li {
-        margin: 10px;
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+
+    .hero-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-top h1 {
+        font-size: 28px;
+    }
+
+    .logo-right {
+        width: 80px;
+    }
+
+     .carousel {
+        height: 180px;
+        border-radius: 10px;
+    }
+
+    .slides img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+     .cuisine, .surmesure, .presentation, .apropos {
+        padding: 0 15px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .social-item {
+        justify-content: center;
+    }
+
+    .social-item span {
+        font-size: 18px;
+    }
+
+    .social-item img {
+        width: 28px;
+        height: 28px;
     }
 
     main {
         margin-left: 0;
         padding: 20px;
-    }
-
-    .hero-top {
-        flex-direction: column;
-    }
-
-    .hero-top h1 {
-        margin-bottom: 15px;
-        font-size: 32px;
-    }
-
-    .logo-right {
-        margin: 0;
-        width: 100px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .carousel {
-        height: 220px;
-        border-radius: 10px;
-    }
-
-    .slides img {
-        height: 220px;
     }
 }
