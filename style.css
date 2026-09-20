@@ -173,7 +173,7 @@ main {
 
     /* Sidebar plus fine */
     .sidebar {
-        width: 180px !important;
+        width: 150px !important;
         padding: 20px 10px !important;
         height: auto !important;
     }
