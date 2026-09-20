@@ -1,8 +1,261 @@
+/* Police Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    padding: 20px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fbf4ed;
 }
-h1 {
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: #f8f2ec;
+    padding: 30px 20px;
+    height: 100vh;
+    position: fixed;
+    border-right: 2px solid #e2d8cf;
+}
+
+.sidebar h2 {
+    font-size: 26px;
+    color: #c97a4a;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
     color: #333;
+    font-size: 18px;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidebar ul li a:hover {
+    color: #c97a4a;
+    transform: translateX(5px);
+}
+
+/* Contenu principal */
+main {
+    margin-left: 260px;
+    padding: 40px;
+}
+
+/* Header accueil */
+.hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-top h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 42px;
+    color: #c97a4a;
+    font-weight: 600;
+}
+
+.logo-right {
+    width: 120px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+.cuisine, .surmesure, .presentation, .apropos {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Carrousel */
+/* Carrousel */
+.carousel {
+    margin-top: 40px;
+    overflow: hidden;
+    width: 100%;
+    height: 280px; /* hauteur réduite = plus de plat visible */
+    border-radius: 15px;
+}
+
+/* Conteneur des images */
+.slides {
+    display: flex;
+    animation: slide 35s infinite;
+}
+
+/* Images */
+.slides img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover; /* pas de zoom excessif avec hauteur réduite */
+    border-radius: 15px;
+}
+
+
+
+/* Animation sans vide */
+@keyframes slide {
+    0%   { transform: translateX(0); }
+    33%  { transform: translateX(-100%); }
+    66%  { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Footer réseaux sociaux */
+.social-footer {
+    margin-top: 50px;
+    text-align: center;
+    background: #c97a4a;
+    padding: 30px 0;
+    border-radius: 10px;
+}
+
+.social-footer a {
+    margin: 0 15px;
+    color: #fff;           /* texte blanc pour contraster */
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-footer a:hover {
+    color: #333;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* espace entre les images */
+    margin-bottom: 20px; /* espace entre images et réseaux */
+}
+
+.footer-images img {
+    width: 40px;   /* taille des icônes */
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Conteneur des réseaux */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 80px; /* plus d’espace entre les réseaux */
+}
+
+/* Un réseau = nom + icône */
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* espace entre nom et icône */
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+/* Nom du réseau */
+.social-item span {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Icône */
+.social-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Effet hover premium */
+.social-item:hover span {
+    color: #333;
+}
+
+.social-item:hover img {
+    transform: scale(1.15);
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 2px solid #e2d8cf;
+        padding: 10px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar ul li {
+        margin: 10px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .hero-top {
+        flex-direction: column;
+    }
+
+    .hero-top h1 {
+        margin-bottom: 15px;
+        font-size: 32px;
+    }
+
+    .logo-right {
+        margin: 0;
+        width: 100px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .carousel {
+        height: 220px;
+        border-radius: 10px;
+    }
+
+    .slides img {
+        height: 220px;
+    }
 }
