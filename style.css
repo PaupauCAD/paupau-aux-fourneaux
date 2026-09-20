@@ -217,26 +217,45 @@ main {
         height: auto;
     }
 
-    /* Sidebar cachée par défaut sur mobile */
-    .sidebar {
-        display: none;
-    }
+    /* Sidebar devient un menu horizontal */
+.sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-bottom: 2px solid #e2d8cf;
+    padding: 10px 0;
+    text-align: center;
+}
 
-    /* Sidebar visible quand active */
-    .sidebar.active {
-        display: block;
-    }
+/* Le titre centré */
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 
-    .sidebar ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
+/* Les liens deviennent des onglets */
+.sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
 
-    .sidebar ul li a {
-        font-size: 16px;
-    }
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    font-size: 16px;
+    padding: 6px 10px;
+    background: #c97a4a;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
 
     .hero-top {
         flex-direction: column;
@@ -267,9 +286,9 @@ main {
         line-height: 1.6;
     }
 
-    .footer-links {
+   .footer-links {
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -286,20 +305,9 @@ main {
     height: 26px;
 }
 
+
     main {
         margin-left: 0;
         padding: 20px;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-        background: #c97a4a;
-        color: #fff;
-        border: none;
-        padding: 12px 20px;
-        font-size: 20px;
-        width: 100%;
-        text-align: left;
-        cursor: pointer;
     }
 }
