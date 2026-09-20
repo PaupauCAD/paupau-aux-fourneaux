@@ -172,22 +172,32 @@ main {
 @media (max-width: 768px) {
 
     /* Sidebar plus fine */
-    .sidebar {
-        width: 150px !important;
-        padding: 20px 10px !important;
-        height: auto !important;
-    }
+.sidebar {
+    width: 180px !important;
+    padding: 10px 8px !important; /* réduit le padding */
+    height: auto !important;
+}
 
-    /* Contenu aligné */
-    main {
-        margin-left: 180px !important;
-    }
+/* Contenu aligné */
+main {
+    margin-left: 180px !important;
+}
 
-    /* Titre plus petit */
-    .sidebar h2 {
-        font-size: 18px !important;
-        margin-bottom: 15px !important;
-    }
+/* Titre mieux espacé */
+.sidebar h2 {
+    font-size: 16px !important;
+    margin: 0 0 10px 0 !important;
+    padding: 6px 4px !important; /* ajoute de l’espace interne */
+    line-height: 1.2 !important;
+}
+
+/* Liens plus petits et moins larges */
+.sidebar ul li a {
+    font-size: 14px !important;
+    padding: 4px 4px !important;
+    display: inline-block !important; /* ne prend plus toute la largeur */
+    width: auto !important; /* laisse respirer */
+}
 
     /* Liens plus petits */
     .sidebar ul {
@@ -200,11 +210,6 @@ main {
 
     .sidebar ul li {
         margin: 5px 0 !important;
-    }
-
-    .sidebar ul li a {
-        font-size: 15px !important;
-        padding: 4px 6px !important;
     }
 
     /* Header mobile */
