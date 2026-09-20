@@ -1,10 +1,15 @@
 /* Police Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background: #fbf4ed;
+}
+
+.mobile-menu-btn {
+    display: none;
 }
 
 /* Sidebar */
@@ -207,14 +212,19 @@ main {
 
 /* Responsive mobile */
 @media (max-width: 768px) {
-
-    .sidebar {
-        width: 100%;
+    .logo-right {
+        width: 80px;
         height: auto;
-        position: relative;
-        border-bottom: 2px solid #e2d8cf;
-        padding: 15px 0;
-        text-align: center;
+    }
+
+    /* Sidebar cachée par défaut sur mobile */
+    .sidebar {
+        display: none;
+    }
+
+    /* Sidebar visible quand active */
+    .sidebar.active {
+        display: block;
     }
 
     .sidebar ul {
@@ -258,25 +268,38 @@ main {
     }
 
     .footer-links {
-        flex-direction: column;
-        gap: 20px;
-    }
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
 
-    .social-item {
-        justify-content: center;
-    }
+.social-item {
+    justify-content: center;
+}
 
-    .social-item span {
-        font-size: 18px;
-    }
+.social-item span {
+    font-size: 18px;
+}
 
-    .social-item img {
-        width: 28px;
-        height: 28px;
-    }
+.social-item img {
+    width: 26px;
+    height: 26px;
+}
 
     main {
         margin-left: 0;
         padding: 20px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: #c97a4a;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        font-size: 20px;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
     }
 }
