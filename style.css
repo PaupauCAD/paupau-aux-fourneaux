@@ -173,12 +173,12 @@ main {
 
     /* Sidebar devient un menu horizontal */
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-bottom: 2px solid #e2d8cf;
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
         padding: 10px 0;
-        text-align: center;
+        border-right: none;
+        border-bottom: 2px solid #e2d8cf;
     }
 
     .sidebar h2 {
@@ -196,17 +196,13 @@ main {
     }
 
     .sidebar ul li {
-        list-style: none;
-    }
+    margin: 5px 0;
+}
 
-    .sidebar ul li a {
-        font-size: 16px;
-        padding: 6px 10px;
-        background: #c97a4a;
-        color: #fff;
-        border-radius: 6px;
-        text-decoration: none;
-    }
+.sidebar ul li a {
+    padding: 4px 8px;
+    font-size: 15px;
+}
 
     /* Header mobile */
     .hero-top {
