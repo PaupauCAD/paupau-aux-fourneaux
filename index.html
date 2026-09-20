@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <title>Paupau aux Fourneaux</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <button class="mobile-menu-btn">☰ Menu</button>
-    <!-- Sidebar -->
+
+    <!-- Sidebar (PC) / Menu horizontal (mobile) -->
     <nav class="sidebar">
         <h2>Paupau aux Fourneaux</h2>
         <ul>
@@ -29,13 +31,15 @@
 
     <!-- Contenu principal -->
     <main>
-       <header class="hero">
-    <div class="hero-top">
-        <h1>Paupau aux Fourneaux</h1>
-        <img src="image/Logo.png" class="logo-right">
-    </div>
-    <p>Bienvenue dans mon univers culinaire ! Je propose une cuisine à domicile, des menus sur mesure et des créations gourmandes chaque mois.</p>
-</header>
+
+        <!-- Header -->
+        <header class="hero">
+            <div class="hero-top">
+                <h1>Paupau aux Fourneaux</h1>
+                <img src="image/Logo.png" class="logo-right" alt="Logo">
+            </div>
+            <p>Bienvenue dans mon univers culinaire ! Je propose une cuisine à domicile, des menus sur mesure et des créations gourmandes chaque mois.</p>
+        </header>
 
         <!-- Carrousel -->
         <section class="carousel">
@@ -57,17 +61,18 @@
             </div>
         </section>
 
-    <section class="presentation">
-    <p>Bien manger, sans passer sa semaine en cuisine ! </p>
-    <p>Entre le travail, les rendez-vous, la famille et la vie quotidienne, trouver le temps de cuisiner des bons repas peut vite devenir compliqué.</p>
-    <p><strong>Paupau aux Fourneaux vient directement chez vous pour vous simplifier la vie !</strong></p>
-    <p>Je prépare dans votre cuisine des repas faits maison, adaptés à vos goûts, à vos habitudes et au nombre de personnes à table. Que vous ayez besoin de plusieurs repas pour la semaine, d'un repas convivial ou d'un moment gourmand à partager, je m'occupe de tout.</p>
-    <p><strong>Vous profitez de votre temps, je m'occupe des fourneaux. </strong></p>
-    <p>Découvrez mes différentes prestations et choissisez la formule qui correspond le mieux à vos besoins.</p>
-    </section>  
+        <!-- Présentation -->
+        <section class="presentation">
+            <p>Bien manger, sans passer sa semaine en cuisine !</p>
+            <p>Entre le travail, les rendez-vous, la famille et la vie quotidienne, trouver le temps de cuisiner des bons repas peut vite devenir compliqué.</p>
+            <p><strong>Paupau aux Fourneaux vient directement chez vous pour vous simplifier la vie !</strong></p>
+            <p>Je prépare dans votre cuisine des repas faits maison, adaptés à vos goûts, à vos habitudes et au nombre de personnes à table.</p>
+            <p><strong>Vous profitez de votre temps, je m'occupe des fourneaux.</strong></p>
+            <p>Découvrez mes différentes prestations et choisissez la formule qui correspond le mieux à vos besoins.</p>
+        </section>
 
-        <!-- Réseaux sociaux -->
-         <footer class="social-footer">
+        <!-- Footer -->
+        <footer class="social-footer">
             <div class="footer-links">
                 <a href="https://www.instagram.com/paupau_aux_fourneaux.cad/" class="social-item" target="_blank">
                     <span>Instagram</span>
@@ -83,12 +88,8 @@
                 </a>
             </div>
         </footer>
+
     </main>
-<script>
-document.querySelector('.mobile-menu-btn').onclick = function() {
-    document.querySelector('.sidebar').classList.toggle('active');
-};
-</script>
 
 </body>
 </html>

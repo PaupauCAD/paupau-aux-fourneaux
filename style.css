@@ -1,18 +1,13 @@
 /* Police Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
-
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background: #fbf4ed;
 }
 
-.mobile-menu-btn {
-    display: none;
-}
-
-/* Sidebar */
+/* Sidebar (PC) */
 .sidebar {
     width: 260px;
     background: #f8f2ec;
@@ -92,7 +87,7 @@ main {
     line-height: 1.6;
 }
 
-
+/* Sections */
 .cuisine, .surmesure, .presentation, .apropos {
     max-width: 800px;
     margin: 40px auto;
@@ -103,32 +98,26 @@ main {
 }
 
 /* Carrousel */
-/* Carrousel */
 .carousel {
     margin-top: 40px;
     overflow: hidden;
     width: 100%;
-    height: 280px; /* hauteur réduite = plus de plat visible */
+    height: 280px;
     border-radius: 15px;
 }
 
-/* Conteneur des images */
 .slides {
     display: flex;
     animation: slide 35s infinite;
 }
 
-/* Images */
 .slides img {
     width: 100%;
     height: 280px;
-    object-fit: cover; /* pas de zoom excessif avec hauteur réduite */
+    object-fit: cover;
     border-radius: 15px;
 }
 
-
-
-/* Animation sans vide */
 @keyframes slide {
     0%   { transform: translateX(0); }
     33%  { transform: translateX(-100%); }
@@ -136,7 +125,7 @@ main {
     100% { transform: translateX(0); }
 }
 
-/* Footer réseaux sociaux */
+/* Footer */
 .social-footer {
     margin-top: 50px;
     text-align: center;
@@ -145,63 +134,32 @@ main {
     border-radius: 10px;
 }
 
-.social-footer a {
-    margin: 0 15px;
-    color: #fff;           /* texte blanc pour contraster */
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.social-footer a:hover {
-    color: #333;
-}
-
-.footer-images {
-    display: flex;
-    justify-content: center;
-    gap: 25px; /* espace entre les images */
-    margin-bottom: 20px; /* espace entre images et réseaux */
-}
-
-.footer-images img {
-    width: 40px;   /* taille des icônes */
-    height: 40px;
-    object-fit: contain;
-}
-
-/* Conteneur des réseaux */
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 80px; /* plus d’espace entre les réseaux */
+    gap: 80px;
 }
 
-/* Un réseau = nom + icône */
 .social-item {
     display: flex;
     align-items: center;
-    gap: 12px; /* espace entre nom et icône */
+    gap: 12px;
     text-decoration: none;
     transition: 0.2s;
 }
 
-/* Nom du réseau */
 .social-item span {
     color: #fff;
     font-size: 22px;
     font-weight: 600;
-    letter-spacing: 0.5px;
 }
 
-/* Icône */
 .social-item img {
     width: 32px;
     height: 32px;
     object-fit: contain;
 }
 
-/* Effet hover premium */
 .social-item:hover span {
     color: #333;
 }
@@ -210,53 +168,47 @@ main {
     transform: scale(1.15);
 }
 
-/* Responsive mobile */
+/* ⭐ MOBILE — TOUT EN BAS POUR NE PAS ÊTRE ÉCRASÉ */
 @media (max-width: 768px) {
-    .logo-right {
-        width: 80px;
-        height: auto;
-    }
 
     /* Sidebar devient un menu horizontal */
-.sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    border-bottom: 2px solid #e2d8cf;
-    padding: 10px 0;
-    text-align: center;
-}
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-bottom: 2px solid #e2d8cf;
+        padding: 10px 0;
+        text-align: center;
+    }
 
-/* Le titre centré */
-.sidebar h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
+    .sidebar h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
 
-/* Les liens deviennent des onglets */
-.sidebar ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    padding: 0;
-    margin: 0;
-}
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+    }
 
-.sidebar ul li {
-    list-style: none;
-}
+    .sidebar ul li {
+        list-style: none;
+    }
 
-.sidebar ul li a {
-    font-size: 16px;
-    padding: 6px 10px;
-    background: #c97a4a;
-    color: #fff;
-    border-radius: 6px;
-    text-decoration: none;
-}
+    .sidebar ul li a {
+        font-size: 16px;
+        padding: 6px 10px;
+        background: #c97a4a;
+        color: #fff;
+        border-radius: 6px;
+        text-decoration: none;
+    }
 
-
+    /* Header mobile */
     .hero-top {
         flex-direction: column;
         gap: 10px;
@@ -268,9 +220,11 @@ main {
 
     .logo-right {
         width: 80px;
+        height: auto;
     }
 
-     .carousel {
+    /* Carrousel mobile */
+    .carousel {
         height: 180px;
         border-radius: 10px;
     }
@@ -280,32 +234,30 @@ main {
         object-fit: cover;
     }
 
-     .cuisine, .surmesure, .presentation, .apropos {
+    /* Sections mobile */
+    .cuisine, .surmesure, .presentation, .apropos {
         padding: 0 15px;
         font-size: 16px;
         line-height: 1.6;
     }
 
-   .footer-links {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
+    /* Footer mobile */
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
 
-.social-item {
-    justify-content: center;
-}
+    .social-item span {
+        font-size: 18px;
+    }
 
-.social-item span {
-    font-size: 18px;
-}
+    .social-item img {
+        width: 26px;
+        height: 26px;
+    }
 
-.social-item img {
-    width: 26px;
-    height: 26px;
-}
-
-
+    /* Main mobile */
     main {
         margin-left: 0;
         padding: 20px;
